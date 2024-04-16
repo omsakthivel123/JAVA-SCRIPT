@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body   onload="reload()" >
+   <center>
+    <form action="" method="post"  onreset="resetForm()" onsubmit="return validdatas()">
+
+    Enter your name :<input onfocus="someaction(this)"  type="text" name="name" id="name" ><br><br>
+
+    Enter your mail_ID :<input onblur="onblur1(this)"   type="email" name="mail" id="mail"><br><br>
+
+    Enter your mobile_No : <input type="number" name="number" id="number" onselect="select1(this)"><br><br>
+
+    Select eny one Place :<select id="place" onchange="place1(this.value)">
+    <option value="option">--- SELECT PLECE ---</OPtion>
+    <option value="AP">AP</option>
+    <option value="TN">TN</option>
+    <option value="KA">KA</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="save">
+    <input type="reset" value="reset"  >
+    </form>
+    
+<script>
+
+function place1(value){
+
+    alert(value);
+}
+
+function select1(val)
+{
+alert("you select something..");
+console.log(val);
+
+}
+
+ function validdatas()
+{
+
+if(document.getElementById("name").value == "")
+{
+alert("plece enter the name")
+return false;
+}
+
+else if(document.getElementById("mail").value =="")
+{ 
+alert("plece enter the mail_id")
+return false;
+}
+
+}
+
+    function someaction(element){
+    console.log(element)
+}
+
+
+    function onblur1(element){
+    console.log(element)
+}
+
+
+      function resetForm(){
+    alert("are you ok with clear")
+}  
+
+
+function reload(){
+
+    alert("you will be reloaded")
+}
+    
+    
+</script>
+
+</center> 
+
+
+
+</body>
+</html>

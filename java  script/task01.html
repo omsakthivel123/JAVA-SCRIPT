@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+<table border="4" align="center">
+   
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Amount Ruppes</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td><select  id="fruit" onchange="find_total()">
+              <option  value="apple">APPLE</option>
+              <option  value="banana">BANANA</option>
+              <option  value="mango">MANGO</option>
+              <option  value="orange">ORANGE</option>
+              <option  value="grapes">GRAPES</option>
+            </select> </td>
+
+          <td>            
+            <p id="amount"></p>
+          </td>  
+
+          <td>
+             <input id="Quantity">     
+          </td>
+
+          <td>
+            <p id="total" >   </p>      
+                 </td><br>
+
+           <p id="result" > </p>      
+
+                 
+</tbody>
+</table>   
+</body>
+ <script>
+
+        //   document.getElementById("fruit").addEventListener("change",find_total);                
+          document.getElementById("Quantity").addEventListener("input",find_total);
+        
+                              
+                                  // (or)
+
+            // var p=document.getElementById("fruit")
+            //  var l=  document.getElementById("Quantity")
+            //      p.addEventListener("change",find_total);
+            //       l.addEventListener("input",find_total);
+
+
+                            function find_total(){
+
+                             
+                            var a=document.getElementById("fruit").value;
+                            var q=document.getElementById("Quantity").value;
+                            // alert(a);
+                            var amount=0;
+
+                            if(a=="apple"){
+                                var amount =100;
+                                
+                            }
+                            else if(a=="banana"){
+                                var amount=50;                              
+                            }
+
+                            else if(a=="mango"){
+                                 var amount=72;
+                                }
+
+                                else if(a=="orange"){
+                                 var amount=80;
+                                }
+                                 
+                                else if(a=="grapes"){
+                                var amount=200;
+                                }
+
+                       var c = document.getElementById("amount").innerHTML=amount;   
+                        
+                            var n=q*c;  
+                        document.getElementById("total").innerHTML=n;
+                        var i="your amount is"+" :"+n;
+                        document.getElementById("result").innerHTML=i;
+                       
+                            }
+                            
+</script>
+</html>
+    
+
+

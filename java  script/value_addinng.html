@@ -1,0 +1,20 @@
+<input id="input" >
+<button onclick="add()">add</button>
+<ul id="demo">
+ 
+    <li>Hello
+        <button>Delete</button>
+    </li>
+</ul>
+<script>
+    var a=document.getElementById("demo")
+    var b=document.getElementById("input")
+
+    function add(){
+
+        var listitem=document.createElement("h1")
+        listitem.textContent=b.value
+      a.append(listitem)
+
+    } 
+</script>

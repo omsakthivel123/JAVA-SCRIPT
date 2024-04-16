@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>   
+<table border="4" align="center">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Amount Ruppes</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <select id="fruit">
+                    <option value="apple">APPLE</option>
+                    <option value="banana">BANANA</option>
+                    <option value="mango">MANGO</option>
+                    <option value="orange">ORANGE</option>
+                    <option value="grapes">GRAPES</option>
+                </select>
+            </td>
+            <td>            
+                <p id="amount"></p>
+            </td>
+            <td>
+                <input id="Quantity" style="background-color: aqua;" >
+            </td>
+            <td>
+                <p id="total"></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" id="result"></td>
+        </tr>
+    </tbody>
+</table>   
+<script>
+    document.getElementById("fruit").addEventListener("change", find_total);                
+    document.getElementById("Quantity").addEventListener("input", find_total);
+     
+    function find_total() {
+        var a = document.getElementById("fruit").value;
+        var q = document.getElementById("Quantity").valu;
+
+        var amount = 0;
+
+        if (a == "apple") {
+            amount = 100;
+        } else if (a == "banana") {
+            amount = 50;
+        } else if (a == "mango") {
+            amount = 72;
+        } else if (a == "orange") {
+            amount = 80;
+        } else if (a == "grapes") {
+            amount = 200;
+        }
+
+        document.getElementById("amount").innerHTML = amount;
+
+        var total = q * amount;
+        document.getElementById("total").innerHTML = total;
+
+        var result = "Your amount is: " + total;
+        document.getElementById("result").innerHTML = result;   
+    }
+
+
+    function change(){
+        document.getElementById("Quantity").style.backgroundColor=" aqua";
+    }
+</script>
+</body>
+</html>

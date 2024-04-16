@@ -1,0 +1,36 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript can Change HTML</h2>
+
+<p id="p1">Hello World!</p>
+
+<script>
+var x=document.getElementById("p1")
+console.log("hii")
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript HTML Events</h1>
+<h2>The oninput Attribute</h2>
+
+Enter your name: <input type="text" id="fname" oninput="upperCase()">
+<p>When you write in the input field, a function is triggered to transform the input to upper case.</p>
+  
+<script>
+function upperCase() {
+  const x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>

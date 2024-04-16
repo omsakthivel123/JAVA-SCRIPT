@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<center>
+<button id="demo1">click</button><br>
+<button id="demo2">onmousedown</button><br>
+<button id="demo3">omouseover</button><br>
+<button id="demo4">onmouseup</button><br>
+<button id="demo5">onmouseenter</button><br>
+<button id="demo6" onchange="change()">onmouseout</button><br>
+<input type="submit" name="" id="result" >
+
+
+    <input type="text" name="" id="hii">
+
+
+
+            
+    <script>
+ 
+        document.getElementById("demo1").onclick=function  click(){
+           alert("mouse is click");
+       
+        }
+
+        document.getElementById("demo2").onmousedown=function  click(){
+           alert("mouse is down");
+       
+        }
+
+        
+        // document.getElementById("demo3").onmouseover=function  click(){
+        //    alert("mouse is over");
+
+       
+        // }
+
+       var c= document.getElementById("demo3");
+
+       c.addEventListener("mouseover",hii);
+
+       function hii(){
+        alert("mouse is over");
+       }
+
+        document.getElementById("demo4").onmouseup=function  click(){
+           alert("mouse is up");
+       
+        }
+
+         
+        document.getElementById("demo5").onmouseenter=function  click(){
+           alert("mouse is enter");
+       
+        }
+
+
+
+        document.getElementById("demo6").onmouseout=function  click(){
+           alert("mouse is out");
+       
+        }
+          
+        document.getElementById("result").onclick=function click(){alert("thankyou..")}
+       
+
+        // var h=document.getElementById("hi").onfocus =function(){
+        //         style.backgroundColor='yellow';
+        // }
+
+
+        
+        document.getElementById("demo6").onmouseover=function over(){
+            alert("hii");
+        }
+    </script>
+
+    
+
+
+</center>
+    
+</body>
+</html>
